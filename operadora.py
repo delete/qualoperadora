@@ -78,13 +78,3 @@ class Operadora(object):
         os.remove('t.txt')
         return lista
 
-if __name__ == '__main__':
-    p = Operadora()
-    num = input('Digite DDD+NUMERO: ')
-    p.setNumero(num)
-    p.configura()
-    lista = p.filtro()
-
-    print('Numero: ' + lista[0])
-    print('Operadora: ' + lista[1])
-    print('Estado: ' + lista[2])
