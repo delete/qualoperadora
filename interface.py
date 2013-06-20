@@ -106,6 +106,9 @@ class Ui_Dialog(object):
         try:
             p.configura()
             lista = p.filtro()
+            font = QtGui.QFont()
+            font.setPointSize(9)
+            self.label_numero.setFont(font)
             self.label_numero.setText(QtGui.QApplication.translate("Dialog", lista[0], None, QtGui.QApplication.UnicodeUTF8))
             self.label_operadora.setText(QtGui.QApplication.translate("Dialog", lista[1], None, QtGui.QApplication.UnicodeUTF8))
             self.label_estado.setText(QtGui.QApplication.translate("Dialog", lista[2], None, QtGui.QApplication.UnicodeUTF8))
@@ -113,7 +116,9 @@ class Ui_Dialog(object):
             font = QtGui.QFont()
             font.setPointSize(15)
             self.label_numero.setFont(font)
-            self.label_5.setText(QtGui.QApplication.translate("Dialog", 'Número inválido!', None, QtGui.QApplication.UnicodeUTF8))
+            self.label_numero.setText(QtGui.QApplication.translate("Dialog", 'Número inválido!', None, QtGui.QApplication.UnicodeUTF8))
+            self.label_operadora.setText(QtGui.QApplication.translate("Dialog", '', None, QtGui.QApplication.UnicodeUTF8))
+            self.label_estado.setText(QtGui.QApplication.translate("Dialog", '', None, QtGui.QApplication.UnicodeUTF8))
 
     def openUrl(self, URL):
         QtGui.QDesktopServices().openUrl(QUrl(URL))
